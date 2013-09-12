@@ -125,11 +125,17 @@ module ApiTaster
         end
       end
 
+      def diff(h1,h2)
+        h1.dup.delete_if { |k, v|
+          h2[k] == v
+        }.merge!(h2.dup.delete_if { |k, v| h1.has_key?(k) })
+      end
+
       def split_input(input, route)
         url_param_keys = route[:path].scan /:\w+/
 
         url_params  = input.reject { |k, v| ! ":#{k}".in?(url_param_keys) }
-        post_params = input.diff(url_params)
+        post_params = diff(input, url_params)
 
         {
           :url_params  => url_params,
