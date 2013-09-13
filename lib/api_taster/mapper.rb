@@ -40,7 +40,7 @@ module ApiTaster
           }
         else
           Route.supplied_params[route[:id]] ||= []
-          Route.supplied_params[route[:id]] << ApiTaster.global_params.merge(params)
+          Route.supplied_params[route[:id]] << ApiTaster::Load.global_params.merge(params)
 
           unless last_desc.nil?
             Route.comments[route[:id]] = last_desc
