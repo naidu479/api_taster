@@ -12,6 +12,7 @@ module ApiTaster
       @route   = Route.find(params[:id])
       @params  = Route.params_for(@route)
       @comment = Route.comment_for(@route)
+      render :layout => false
     end
 
     def missing_definitions
