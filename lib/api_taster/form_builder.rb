@@ -1,6 +1,8 @@
 module ApiTaster
   class FormBuilder < AbstractController::Base
     include AbstractController::Rendering
+    include ActionView::Rendering
+    include AbstractController::Rendering
     include ActionView::Context
     include ActionView::Helpers::CaptureHelper
 
