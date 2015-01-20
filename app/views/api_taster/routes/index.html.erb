@@ -21,7 +21,7 @@
           <li class="nav-header"><%= controller %></li>
           <% routes.each do |route| %>
             <li>
-              <a href="<%= route_path(route[:id]) %>">
+              <a href="<%= route_path(route[:id]) %>" data-no-turbolink>
                 <div class="label-api label-api-full">
                   <span class="label label-important"><%= route[:verb] %></span>
                 </div>
