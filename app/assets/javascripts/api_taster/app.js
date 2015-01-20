@@ -108,6 +108,13 @@ jQuery(function($) {
 
       $("#show-api-div form").submit(onSubmit);
       $("#show-api-response-div").enableNavTabsFor("pre");
+
+      if($("a[rel~=popover], .has-popover").length != 0) {
+        $("a[rel~=popover], .has-popover").popover();
+      }
+      if($("a[rel~=tooltip], .has-tooptip").length != 0) {
+        $("a[rel~=tooltip], .has-tooltip").tooltip();
+      }
     });
   });
 

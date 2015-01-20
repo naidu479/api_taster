@@ -1,4 +1,4 @@
-<div id="main-container" class="row-fluid">
+<div id="main-container" class="row-fluid" data-no-turbolink>
   <div id="list-api-div" class="span5">
     <div class="div-container">
       <ul class="well nav nav-list">
@@ -21,7 +21,7 @@
           <li class="nav-header"><%= controller %></li>
           <% routes.each do |route| %>
             <li>
-              <a href="<%= route_path(route[:id]) %>" data-no-turbolink>
+              <a href="<%= route_path(route[:id]) %>">
                 <div class="label-api label-api-full">
                   <span class="label label-important"><%= route[:verb] %></span>
                 </div>
