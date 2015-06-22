@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency 'rails', '>= 4.0.0'
-  s.add_dependency 'jquery-rails', '3.0.4'
-  s.add_dependency 'sass-rails', '4.0.1'
+  s.add_dependency 'jquery-rails', '~> 3.0.4'
+  s.add_dependency 'sass-rails', '~> 4.0.1'
   s.add_dependency 'bootstrap-sass', '~> 2.1'
   #s.add_dependency 'redcarpet'
   s.add_dependency 'kramdown'
